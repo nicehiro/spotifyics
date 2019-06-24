@@ -1,0 +1,16 @@
+* Spotifyics
+
+Get lyrics for spotify linux. Lyrics from Netease Music API.
+
+** Screenshot
+
+[[file:./imgs/Screenshot.png][Screenshot]]
+
+** TODO TodoList [2/4]
+- [X] Get current playing song's information
+
+- [X] Get current playing song's lyrics
+
+- [ ] Nice GUI
+
+- [ ] Scroll with song's move on
