@@ -4,13 +4,14 @@ Get lyrics for spotify linux. Lyrics from Netease Music API.
 
 ** Screenshot
 
-[[./imgs/Screenshot.png]]
+[[./imgs/Screenshot_2.png]]
 
-** TODO TodoList [2/4]
+** TODO TodoList [3/4]
 - [X] Get current playing song's information
 
 - [X] Get current playing song's lyrics
 
-- [ ] Nice GUI
+- [X] Simple GUI
 
 - [ ] Scroll with song's move on
+  Can't get current playing song's position.

@@ -1,4 +1,5 @@
 import dbus
+from functools import reduce
 
 
 class SpotifyDBus(object):
@@ -32,3 +33,12 @@ class SpotifyDBus(object):
         iface = dbus.Interface(spotify_bus, self.interface)
         method_get = iface.get_dbus_method(self.method)
         return method_get(self.meta_interface, self.metadata_label)
+
+    def get_keywords(self):
+        """Pick keywords from DBus."""
+        metadata = self.get_metadata()
+        title = metadata[dbus.String(self.metadata_title)][:]
+        album = metadata[dbus.String(self.metadata_album)][:]
+        artist = reduce(lambda x, y: x[:] + ' ' + y[:],
+                        metadata[dbus.String(self.metadata_artist)][:])[:]
+        return '%s %s %s' % (title, album, artist)
